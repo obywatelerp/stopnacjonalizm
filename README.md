@@ -1,1 +1,1 @@
-# stopnacjonalizm
+# mapa dla https://stopnacjonalizm.pl
