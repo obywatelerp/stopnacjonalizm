@@ -13,18 +13,24 @@
     <script src="./src/xslt.js"></script>
     <link rel="stylesheet" type="text/css" href="./src/leaflet.css">
     <link rel="stylesheet" type="text/css" href="./app.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="header">
-        <h3>Nacjonaliści w wyborach samorządowych 2018</h3>
-        <p class="info" >Przybliż mapę aby zobaczyć dane kandydatów</p>
+    	<a href="https://obywatelerp.org" target="_blank" class="logo">
+    		<img class="logo__img" src="./Obywatele-RP-logo-300px.png" alt="Logo Obywateli RP">
+    	</a>
+        <h1 class="main-heading">Nacjonaliści w wyborach samorządowych 2018</h2>
         <p>Jeśli wiesz o innych kandydujących nacjonalistach przekaż nam tę informację wypełniając <a href="#form">formularz</a> pod mapą.</p>  
     </div>
     <div class="container">
         <div class="wrapper">
             <div class="info-container">
-                <div id="info"></div>
+                <div id="info">
+                	<p class="info">Przybliż mapę aby zobaczyć dane kandydatów</p>
+                </div>
             </div>            
             <div class="map-container">
                 <div id="map"></div>
