@@ -50,7 +50,7 @@
         // Add WMS source/layers
         var source = new MySource(
           //  "https://mapy.obywatelerp.org/cgi-bin/konst/qgis_mapserv.fcgi", 
-            "https://stopnacjonalizm.pl/cgi-bin/stopn/qgis_mapserv.fcgi",
+            "https://mapy.obywatelerp.org/cgi-bin/stopn/qgis_mapserv.fcgi",
             {
                 "format": "image/png",
                 "transparent": "true",
