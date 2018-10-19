@@ -49,8 +49,7 @@
 
         // Add WMS source/layers
         var source = new MySource(
-          //  "https://mapy.obywatelerp.org/cgi-bin/konst/qgis_mapserv.fcgi", 
-            "https://mapy.obywatelerp.org/cgi-bin/stopn/qgis_mapserv.fcgi",
+            "https://mapy.obywatelerp.org/cgi-bin/stopn2/qgis_mapserv.fcgi",
             {
                 "format": "image/png",
                 "transparent": "true",
@@ -69,7 +68,8 @@
             'Miasta/gminy': source.getLayer("gminy").addTo(map),
             'Kandydaci - Sejmiki wojewódzkie': source.getLayer("kandydaci_wojewodztwa").addTo(map),
             'Kandydaci - Rady powiatów': source.getLayer("kandydaci_powiaty").addTo(map),
-    	    'Kandydaci - Rady miast/gmin,prezydenci,wójtowie': source.getLayer("kandydaci_gminy").addTo(map)
+    	    'Kandydaci - Rady miast/gmin,prezydenci,wójtowie': source.getLayer("kandydaci_gminy").addTo(map),
+    	    'Kandydaci - na karcie głosowania ': source.getLayer("kandydaci_w_komisji").addTo(map),    	    
         };
         // Create layer control
         L.control.layers(basemaps, layers).addTo(map);

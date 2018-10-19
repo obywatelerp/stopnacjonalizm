@@ -7,9 +7,7 @@
         <xsl:apply-templates select="Layer[@name='gminy']" />           
         <hr></hr>
         <hr></hr>        
-        <xsl:apply-templates select="Layer[@name='kandydaci_wojewodztwa']" /> 
-        <xsl:apply-templates select="Layer[@name='kandydaci_powiaty']" />   
-        <xsl:apply-templates select="Layer[@name='kandydaci_gminy']" />           
+        <xsl:apply-templates select="Layer[@name='kandydaci_w_komisji']" /> 
     </xsl:template>
 
     <xsl:template match="Layer[@name='wojewodztwa']">
@@ -48,18 +46,10 @@
        </xsl:if> 
     </xsl:template>       
     
-    <xsl:template match="Layer[@name='kandydaci_wojewodztwa']">
+    <xsl:template match="Layer[@name='kandydaci_w_komisji']">
        <xsl:call-template name="kandydaci"/>
     </xsl:template>
     
-    <xsl:template match="Layer[@name='kandydaci_powiaty']">
-       <xsl:call-template name="kandydaci"/>
-    </xsl:template>    
-    
-    <xsl:template match="Layer[@name='kandydaci_gminy']">
-       <xsl:call-template name="kandydaci"/>
-    </xsl:template>    
-
     <xsl:template name="kandydaci" >
        <xsl:if test="count(Feature) &gt; 0">
 

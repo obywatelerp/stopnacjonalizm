@@ -198,7 +198,7 @@ wms.Source = L.Layer.extend({
             'Y': Math.round(point.y),
    // MKL <--
             'FEATURE_COUNT': 999,
-            'FI_POINT_TOLERANCE': 20
+            'FI_POINT_TOLERANCE': 1
    // MKL -->            
         };
         return L.extend({}, wmsParams, infoParams);
