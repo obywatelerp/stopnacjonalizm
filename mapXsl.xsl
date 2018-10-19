@@ -5,8 +5,6 @@
         <xsl:apply-templates select="Layer[@name='wojewodztwa']" />
         <xsl:apply-templates select="Layer[@name='powiaty']" />     
         <xsl:apply-templates select="Layer[@name='gminy']" />           
-        <hr></hr>
-        <hr></hr>        
         <xsl:apply-templates select="Layer[@name='kandydaci_w_komisji']" /> 
     </xsl:template>
 
@@ -52,7 +50,9 @@
     
     <xsl:template name="kandydaci" >
        <xsl:if test="count(Feature) &gt; 0">
-
+        <hr></hr>
+        <p>Nacjonaliści na twojej karcie do głosowania:</p>
+        <hr></hr>  
          <xsl:for-each select="Feature">
          <table>             
            <tr>
