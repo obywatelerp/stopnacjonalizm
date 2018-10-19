@@ -74,6 +74,16 @@
         // Create layer control
         L.control.layers(basemaps, layers).addTo(map);
 
+
+        var geoOptions = {
+            locateOptions: {
+                maxZoom: 11
+            },
+            flyTo: true
+        };
+
+        L.control.locate(geoOptions).addTo(map);
+
         // Opacity slider
         //    var slider = L.DomUtil.get('range-' + div);
         //    L.DomEvent.addListener(slider, 'change', function() {
