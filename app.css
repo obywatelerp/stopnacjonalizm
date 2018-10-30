@@ -103,6 +103,9 @@ body {
     padding-right: 10px;
 }
 
+.wybrany {
+    color: red ;
+}
 
 .footer p {
     text-align: center ;

@@ -49,8 +49,9 @@
 
         // Add WMS source/layers
         var source = new MySource(
-            "https://mapy.obywatelerp.org/cgi-bin/stopn2/qgis_mapserv.fcgi",
+            "https://mapy.obywatelerp.org/cgi-bin/stopn3/qgis_mapserv.fcgi",
             {
+                "version": "1.3.0",
                 "format": "image/png",
                 "transparent": "true",
                 "attribution": "<a href='https://obywatelerp.org/'>ObywateleRP</a>",
@@ -88,7 +89,7 @@
         var geocoder = L.Control.geocoder({
                 defaultMarkGeocode: false ,
                 position: "topleft",
-                placeholder: "Miejsce, w którym głosujesz"
+                placeholder: "Miejscowość"
             })
             .on('markgeocode', function(e) {
                 var bbox = e.geocode.bbox;

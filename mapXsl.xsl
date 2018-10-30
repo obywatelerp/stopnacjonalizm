@@ -54,7 +54,12 @@
         <p>Nacjonaliści na twojej karcie do głosowania:</p>
         <hr></hr>  
          <xsl:for-each select="Feature">
-         <table>             
+         <xsl:sort select="Attribute[@name='wybrany']/@value"  order="descending"/>    
+         <table>           
+            <xsl:if test="Attribute[@name='wybrany']/@value = 'true'">   
+                <xsl:attribute name="class">wybrany</xsl:attribute>
+
+            </xsl:if>         
            <tr>
               <th scope="row">imię/nazwisko:</th>
               <td><xsl:apply-templates select="Attribute[@name='imie']" />&nbsp;
@@ -74,6 +79,7 @@
               <th scope="row">komitet wyborczy:</th>
               <td><xsl:apply-templates select="Attribute[@name='komitet_wyborczy']" /></td>
            </tr>
+           <xsl:apply-templates select="Attribute[@name='wybrany']" />
            </table>
            <hr></hr>
          </xsl:for-each>
@@ -82,6 +88,15 @@
        </xsl:if> 
     </xsl:template>
 
+
+    <xsl:template match="Attribute[@name='wybrany']">
+        <xsl:if test="@value = 'true'">   
+           <tr>
+              <th scope="row">mandat:</th>
+              <td>TAK</td>
+           </tr>       
+        </xsl:if>
+    </xsl:template> 
 
     <xsl:template match="Attribute[@name='name']" >
          <xsl:value-of select="@value" />
